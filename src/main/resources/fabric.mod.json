@@ -3,10 +3,10 @@
   "id": "ninjas",
   "version": "${version}",
   "name": "Ninjas Mod",
-  "description": "",
-  "authors": [],
+  "description": "expands the combat roll mod adding ninja armor",
+  "authors": ["NotANoob/Cooperzilla"],
   "contact": {
-    "repo": "https://github.com/coope/Ninjas Mod"
+    "repo": "https://github.com/Cooperzilla/Ninjas-Mod"
   },
   "license": "All-Rights-Reserved",
   "environment": "*",
@@ -18,6 +18,10 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "combatroll": ">=1.3.1+1.20.1"
+  },
+  "recommends": {
+    "bettercombat": ">=1.8.4+1.20.1"
   }
 }

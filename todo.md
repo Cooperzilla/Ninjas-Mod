@@ -6,9 +6,7 @@
 - - Shinobi Armor
 
 ## Setup
-- fabric.json
-- - dependencies
-- - fix repo link
+- fix gradle.properties not working w/ fabric.mod.json
 - make a mod.png
 
 ## Content

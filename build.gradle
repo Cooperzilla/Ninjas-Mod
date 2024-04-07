@@ -9,13 +9,24 @@ base {
     archivesName = project.archives_base_name
 }
 
-repositories {}
+repositories {
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+}
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    modImplementation "maven.modrinth:combat-roll:${project.combat_roll_version}-fabric"
+    modImplementation "maven.modrinth:better-combat:${project.better_combat_version}-fabric"
+
+    modImplementation "maven.modrinth:cloth-config:${project.cloth_config_version}"
+    modImplementation "maven.modrinth:playeranimator:${project.player_animator_version}"
 }
 
 processResources {
