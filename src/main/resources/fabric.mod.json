@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "ninjas",
+  "version": "${version}",
+  "name": "Ninjas Mod",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/coope/Ninjas Mod"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.notanoob.ninjas_mod.NinjasMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "item.ninjas.ninja_helmet": "Ninja Helmet",
+  "item.ninjas.ninja_chestplate": "Ninja Chestplate",
+  "item.ninjas.ninja_leggings": "Ninja Leggings",
+  "item.ninjas.ninja_boots": "Ninja Boots",
+  "item.ninjas.shinobi_helmet": "Shinobi Helmet",
+  "item.ninjas.shinobi_chestplate": "Shinobi Chestplate",
+  "item.ninjas.shinobi_leggings": "Shinobi Leggings",
+  "item.ninjas.shinobi_boots": "Shinobi Boots",
+
+  "item.ninjas.iron_katana": "Iron Katana",
+  "item.ninjas.diamond_katana": "Diamond Katana",
+  "item.ninjas.netherite_katana": "Netherite Katana",
+  "item.ninjas.iron_sai": "Iron Sai",
+  "item.ninjas.diamond_sai": "Diamond Sai",
+  "item.ninjas.netherite_sai": "Netherite Sai",
+
+  "itemGroup.ninjas.tab": "Ninjas"
+}

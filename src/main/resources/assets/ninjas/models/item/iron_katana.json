@@ -1,0 +1,6 @@
+{
+  "parent": "ninjas:item/katana",
+  "textures": {
+    "layer0": "ninjas:item/iron_katana"
+  }
+}

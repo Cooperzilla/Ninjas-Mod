@@ -1,0 +1,6 @@
+{
+  "parent": "ninjas:item/sai",
+  "textures": {
+    "layer0": "ninjas:item/netherite_sai"
+  }
+}
