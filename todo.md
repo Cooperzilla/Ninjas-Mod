@@ -13,7 +13,6 @@
 - add spells
 - samurai/netherite samurai armor (or other tier2 armor)
 - ninja stars
-- climbing claws?
 
 ## Bugs
 

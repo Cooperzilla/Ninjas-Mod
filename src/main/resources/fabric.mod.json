@@ -13,13 +13,18 @@
   "entrypoints": {
     "main": [
       "me.notanoob.ninjas_mod.NinjasMod"
+    ],
+    "client": [
+      "me.notanoob.ninjas_mod.client.NinjasModClient"
     ]
   },
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "combatroll": ">=1.3.1+1.20.1"
+    "combatroll": ">=1.3.1+1.20.1",
+    "spell_engine": ">=0.13.3+1.20.1",
+    "azurelibarmor": ">=2.0.3"
   },
   "recommends": {
     "bettercombat": ">=1.8.4+1.20.1"

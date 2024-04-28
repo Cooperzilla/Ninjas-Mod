@@ -13,7 +13,19 @@ repositories {
     maven {
         name = "Modrinth"
         url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup 'maven.modrinth'
+        }
     }
+
+    maven {url 'https://libs.azuredoom.com:4443/mods'}
+
+    maven {
+        name "KosmX's maven"
+        url 'https://maven.kosmx.dev/'
+    }
+
+    maven { url "https://maven.shedaniel.me/" }
 }
 
 dependencies {
@@ -24,9 +36,8 @@ dependencies {
 
     modImplementation "maven.modrinth:combat-roll:${project.combat_roll_version}-fabric"
     modImplementation "maven.modrinth:better-combat:${project.better_combat_version}-fabric"
-
-    modImplementation "maven.modrinth:cloth-config:${project.cloth_config_version}"
-    modImplementation "maven.modrinth:playeranimator:${project.player_animator_version}"
+    modImplementation "maven.modrinth:spell-engine:${project.spell_engine_version}"
+    modImplementation "mod.azure.azurelibarmor:azurelibarmor-fabric-${project.minecraft_version}:${project.azurelib_armor_version}"
 }
 
 processResources {
