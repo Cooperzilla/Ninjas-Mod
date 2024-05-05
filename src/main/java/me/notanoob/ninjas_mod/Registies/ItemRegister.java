@@ -5,8 +5,8 @@ import me.notanoob.ninjas_mod.Armor.ShinobiArmor;
 import me.notanoob.ninjas_mod.Weapons.Katana;
 import me.notanoob.ninjas_mod.Weapons.Sai;
 import me.notanoob.ninjas_mod.Weapons.Thrown.KunaiItem;
-import me.notanoob.ninjas_mod.Weapons.Thrown.NetheriteKunaiItem;
-import me.notanoob.ninjas_mod.Weapons.Thrown.NetheriteShurikenItem;
+import me.notanoob.ninjas_mod.Weapons.Thrown.QuartzKunaiItem;
+import me.notanoob.ninjas_mod.Weapons.Thrown.QuartzShurikenItem;
 import me.notanoob.ninjas_mod.Weapons.Thrown.ShurikenItem;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -32,9 +32,9 @@ public class ItemRegister {
     public static Item DiamondSai = new Sai(ToolMaterials.DIAMOND, new Item.Settings());
     public static Item NetheriteSai = new Sai(ToolMaterials.NETHERITE, new Item.Settings().fireproof());
     public static Item Shuriken = new ShurikenItem();
-    public static Item NetheriteShuriken = new NetheriteShurikenItem();
+    public static Item QuartzShuriken = new QuartzShurikenItem();
     public static Item Kunai = new KunaiItem();
-    public static Item NetheriteKunai = new NetheriteKunaiItem();
+    public static Item QuartzKunai = new QuartzKunaiItem();
 
 
     public static void register() {
@@ -53,8 +53,8 @@ public class ItemRegister {
         Registry.register(Registries.ITEM, new Identifier("ninjas", "diamond_sai"), DiamondSai);
         Registry.register(Registries.ITEM, new Identifier("ninjas", "netherite_sai"), NetheriteSai);
         Registry.register(Registries.ITEM, new Identifier("ninjas", "shuriken"), Shuriken);
-        Registry.register(Registries.ITEM, new Identifier("ninjas", "netherite_shuriken"), NetheriteShuriken);
+        Registry.register(Registries.ITEM, new Identifier("ninjas", "quartz_shuriken"), QuartzShuriken);
         Registry.register(Registries.ITEM, new Identifier("ninjas", "kunai"), Kunai);
-        Registry.register(Registries.ITEM, new Identifier("ninjas", "netherite_kunai"), NetheriteKunai);
+        Registry.register(Registries.ITEM, new Identifier("ninjas", "quartz_kunai"), QuartzKunai);
     }
 }

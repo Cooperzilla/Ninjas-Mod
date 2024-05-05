@@ -12,24 +12,24 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 
-import static me.notanoob.ninjas_mod.Registies.EntityRegister.NetheriteShurikenEntityType;
+import static me.notanoob.ninjas_mod.Registies.EntityRegister.QuartzKunaiEntityType;
 
-public class NetheriteShurikenEntity extends ThrownItemEntity {
-    public NetheriteShurikenEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
+public class QuartzKunaiEntity extends ThrownItemEntity {
+    public QuartzKunaiEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public NetheriteShurikenEntity(World world, LivingEntity owner) {
-        super(NetheriteShurikenEntityType, owner, world);
+    public QuartzKunaiEntity(World world, LivingEntity owner) {
+        super(QuartzKunaiEntityType, owner, world);
     }
 
-    public NetheriteShurikenEntity(World world, double x, double y, double z) {
-        super(NetheriteShurikenEntityType, x, y, z, world);
+    public QuartzKunaiEntity(World world, double x, double y, double z) {
+        super(QuartzKunaiEntityType, x, y, z, world);
     }
 
     @Override
     protected Item getDefaultItem() {
-        return ItemRegister.NetheriteShuriken;
+        return ItemRegister.QuartzKunai;
     }
 
     @Override

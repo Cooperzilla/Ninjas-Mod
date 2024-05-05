@@ -1,0 +1,15 @@
+{
+  "type": "smithing_transform",
+  "base": {
+    "item": "ninjas:diamond_sai"
+  },
+  "template": {
+    "item": "minecraft:netherite_smithing_template"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "item": "ninjas:netherite_sai"
+  }
+}

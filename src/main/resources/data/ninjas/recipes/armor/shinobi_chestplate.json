@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "o o",
+    "wow",
+    "lwl"
+  ],
+  "key": {
+    "w": {
+      "tag": "minecraft:wool"
+    },
+    "l": {
+      "item": "minecraft:leather"
+    },
+    "o": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "ninjas:shinobi_chestplate",
+    "count": 1
+  }
+}

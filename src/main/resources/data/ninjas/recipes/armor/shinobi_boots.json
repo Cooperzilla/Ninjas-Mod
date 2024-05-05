@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "l l",
+    "o o"
+  ],
+  "key": {
+    "l": {
+      "tag": "minecraft:leather"
+    },
+    "o": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "ninjas:shinobi_boots",
+    "count": 1
+  }
+}

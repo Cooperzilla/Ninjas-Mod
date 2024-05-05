@@ -19,8 +19,8 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
-public class NetheriteShurikenItem extends Item {
-    public NetheriteShurikenItem() {
+public class QuartzShurikenItem extends Item {
+    public QuartzShurikenItem() {
         super(new Settings().fireproof());
     }
 
@@ -50,10 +50,10 @@ public class NetheriteShurikenItem extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 1F);
 
         if (! world.isClient) {
-            NetheriteShurikenEntity netheriteShuriken = new NetheriteShurikenEntity(world, user);
-            netheriteShuriken.setItem(itemStack);
-            netheriteShuriken.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 0F);
-            world.spawnEntity(netheriteShuriken);
+            QuartzShurikenEntity quartzShuriken = new QuartzShurikenEntity(world, user);
+            quartzShuriken.setItem(itemStack);
+            quartzShuriken.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 0F);
+            world.spawnEntity(quartzShuriken);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
