@@ -19,8 +19,8 @@ import net.minecraft.world.World;
 
 import java.util.UUID;
 
-public class NetheriteKunaiItem extends Item {
-    public NetheriteKunaiItem() {
+public class QuartzKunaiItem extends Item {
+    public QuartzKunaiItem() {
         super(new Settings().fireproof());
     }
 
@@ -50,10 +50,10 @@ public class NetheriteKunaiItem extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 1F);
 
         if (! world.isClient) {
-            NetheriteKunaiEntity netheriteKunai = new NetheriteKunaiEntity(world, user);
-            netheriteKunai.setItem(itemStack);
-            netheriteKunai.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 0F);
-            world.spawnEntity(netheriteKunai);
+            QuartzKunaiEntity quartzKunai = new QuartzKunaiEntity(world, user);
+            quartzKunai.setItem(itemStack);
+            quartzKunai.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 0F);
+            world.spawnEntity(quartzKunai);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));

@@ -1,23 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " n ",
+    " q ",
     " i ",
     " s "
   ],
   "key": {
-    "i": {
-      "item": "minecraft:netherite_ingot"
+    "q": {
+      "item": "minecraft:quartz"
     },
-    "n": {
-      "item": "minecraft:netherite_scrap"
+    "i": {
+      "item": "minecraft:iron_ingot"
     },
     "s": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "ninjas:netherite_kunai",
-    "count": 32
+    "item": "ninjas:quartz_kunai",
+    "count": 8
   }
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " q ",
+    "qiq",
+    " q "
+  ],
+  "key": {
+    "q": {
+      "item": "minecraft:quartz"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "ninjas:quartz_shuriken",
+    "count": 8
+  }
+}

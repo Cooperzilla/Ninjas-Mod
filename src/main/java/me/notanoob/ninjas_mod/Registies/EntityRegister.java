@@ -1,8 +1,8 @@
 package me.notanoob.ninjas_mod.Registies;
 
 import me.notanoob.ninjas_mod.Weapons.Thrown.KunaiEntity;
-import me.notanoob.ninjas_mod.Weapons.Thrown.NetheriteKunaiEntity;
-import me.notanoob.ninjas_mod.Weapons.Thrown.NetheriteShurikenEntity;
+import me.notanoob.ninjas_mod.Weapons.Thrown.QuartzKunaiEntity;
+import me.notanoob.ninjas_mod.Weapons.Thrown.QuartzShurikenEntity;
 import me.notanoob.ninjas_mod.Weapons.Thrown.ShurikenEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
@@ -14,9 +14,9 @@ import net.minecraft.util.Identifier;
 
 public class EntityRegister {
     public static EntityType<ShurikenEntity> ShurikenEntityType;
-    public static EntityType<NetheriteShurikenEntity> NetheriteShurikenEntityType;
+    public static EntityType<QuartzShurikenEntity> QuartzShurikenEntityType;
     public static EntityType<KunaiEntity> KunaiEntityType;
-    public static EntityType<NetheriteKunaiEntity> NetheriteKunaiEntityType;
+    public static EntityType<QuartzKunaiEntity> QuartzKunaiEntityType;
     public static void register() {
         ShurikenEntityType = Registry.register(
                 Registries.ENTITY_TYPE,
@@ -26,10 +26,10 @@ public class EntityRegister {
                         .trackRangeBlocks(4).trackedUpdateRate(10)
                         .build()
         );
-        NetheriteShurikenEntityType = Registry.register(
+        QuartzShurikenEntityType = Registry.register(
                 Registries.ENTITY_TYPE,
-                new Identifier("ninjas", "netherite_shuriken"),
-                FabricEntityTypeBuilder.<NetheriteShurikenEntity>create(SpawnGroup.MISC, NetheriteShurikenEntity::new)
+                new Identifier("ninjas", "quartz_shuriken"),
+                FabricEntityTypeBuilder.<QuartzShurikenEntity>create(SpawnGroup.MISC, QuartzShurikenEntity::new)
                         .dimensions(EntityDimensions.fixed(0.25F, 0.25F))
                         .trackRangeBlocks(4).trackedUpdateRate(10)
                         .build()
@@ -42,10 +42,10 @@ public class EntityRegister {
                         .trackRangeBlocks(4).trackedUpdateRate(10)
                         .build()
         );
-        NetheriteKunaiEntityType = Registry.register(
+        QuartzKunaiEntityType = Registry.register(
                 Registries.ENTITY_TYPE,
-                new Identifier("ninjas", "netherite_kunai"),
-                FabricEntityTypeBuilder.<NetheriteKunaiEntity>create(SpawnGroup.MISC, NetheriteKunaiEntity::new)
+                new Identifier("ninjas", "quartz_kunai"),
+                FabricEntityTypeBuilder.<QuartzKunaiEntity>create(SpawnGroup.MISC, QuartzKunaiEntity::new)
                         .dimensions(EntityDimensions.fixed(0.25F, 0.25F))
                         .trackRangeBlocks(4).trackedUpdateRate(10)
                         .build()
