@@ -19,3 +19,5 @@
 - more thrown weapon mechanics (make a separate library?)
 - better textures
 - animation for throwing weapons
+- better sounds
+- better sai better combat attack animation
