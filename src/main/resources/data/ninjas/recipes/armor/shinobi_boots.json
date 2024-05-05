@@ -7,7 +7,7 @@
   ],
   "key": {
     "l": {
-      "item": "minecraft:leather"
+      "tag": "minecraft:leather"
     },
     "o": {
       "item": "minecraft:obsidian"
