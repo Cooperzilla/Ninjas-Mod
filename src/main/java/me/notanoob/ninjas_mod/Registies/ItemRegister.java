@@ -4,6 +4,10 @@ import me.notanoob.ninjas_mod.Armor.NinjaArmor;
 import me.notanoob.ninjas_mod.Armor.ShinobiArmor;
 import me.notanoob.ninjas_mod.Weapons.Katana;
 import me.notanoob.ninjas_mod.Weapons.Sai;
+import me.notanoob.ninjas_mod.Weapons.Thrown.KunaiItem;
+import me.notanoob.ninjas_mod.Weapons.Thrown.NetheriteKunaiItem;
+import me.notanoob.ninjas_mod.Weapons.Thrown.NetheriteShurikenItem;
+import me.notanoob.ninjas_mod.Weapons.Thrown.ShurikenItem;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterials;
@@ -21,12 +25,18 @@ public class ItemRegister {
     public static Item ShinobiChestplate = new ShinobiArmor(ArmorItem.Type.CHESTPLATE);
     public static Item ShinobiLeggings = new ShinobiArmor(ArmorItem.Type.LEGGINGS);
     public static Item ShinobiBoots = new ShinobiArmor(ArmorItem.Type.BOOTS);
-    public static Item IronKatana = new Katana(ToolMaterials.IRON);
-    public static Item DiamondKatana = new Katana(ToolMaterials.DIAMOND);
-    public static Item NetheriteKatana = new Katana(ToolMaterials.NETHERITE);
-    public static Item IronSai = new Sai(ToolMaterials.IRON);
-    public static Item DiamondSai = new Sai(ToolMaterials.DIAMOND);
-    public static Item NetheriteSai = new Sai(ToolMaterials.NETHERITE);
+    public static Item IronKatana = new Katana(ToolMaterials.IRON, new Item.Settings());
+    public static Item DiamondKatana = new Katana(ToolMaterials.DIAMOND, new Item.Settings());
+    public static Item NetheriteKatana = new Katana(ToolMaterials.NETHERITE, new Item.Settings().fireproof());
+    public static Item IronSai = new Sai(ToolMaterials.IRON, new Item.Settings());
+    public static Item DiamondSai = new Sai(ToolMaterials.DIAMOND, new Item.Settings());
+    public static Item NetheriteSai = new Sai(ToolMaterials.NETHERITE, new Item.Settings().fireproof());
+    public static Item Shuriken = new ShurikenItem();
+    public static Item NetheriteShuriken = new NetheriteShurikenItem();
+    public static Item Kunai = new KunaiItem();
+    public static Item NetheriteKunai = new NetheriteKunaiItem();
+
+
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier("ninjas", "ninja_helmet"), NinjaHelmet);
         Registry.register(Registries.ITEM, new Identifier("ninjas", "ninja_chestplate"), NinjaChestplate);
@@ -42,5 +52,9 @@ public class ItemRegister {
         Registry.register(Registries.ITEM, new Identifier("ninjas", "iron_sai"), IronSai);
         Registry.register(Registries.ITEM, new Identifier("ninjas", "diamond_sai"), DiamondSai);
         Registry.register(Registries.ITEM, new Identifier("ninjas", "netherite_sai"), NetheriteSai);
+        Registry.register(Registries.ITEM, new Identifier("ninjas", "shuriken"), Shuriken);
+        Registry.register(Registries.ITEM, new Identifier("ninjas", "netherite_shuriken"), NetheriteShuriken);
+        Registry.register(Registries.ITEM, new Identifier("ninjas", "kunai"), Kunai);
+        Registry.register(Registries.ITEM, new Identifier("ninjas", "netherite_kunai"), NetheriteKunai);
     }
 }

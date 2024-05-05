@@ -1,21 +1,17 @@
 # TODO
 
-## Priority
-- textures/models
-- - Ninja Armor
-- - Shinobi Armor
-
-## Setup
+## todo
+- add spells
+- add recipes
+- add item textures
+- better armor model/texture
+- add missing model textures for armor and thrown weapons
 - fix gradle.properties not working w/ fabric.mod.json
 - make a mod.png
 
-## Content
-- add spells
-- samurai/netherite samurai armor (or other tier2 armor)
-- ninja stars
+## later updates
+- samurai armor and upgrade
+- more weapons
+- villager
+- more thrown weapon mechanics (make a separate library?)
 
-## Bugs
-
-## Textures
-- better iron katana texture
-- better sai textures

@@ -1,6 +1,6 @@
 package me.notanoob.ninjas_mod.Armor;
 
-import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import me.notanoob.ninjas_mod.ArmorMaterials.NinjaArmorMaterial;
 import me.notanoob.ninjas_mod.client.renderer.NinjaArmorRenderer;
@@ -21,107 +21,65 @@ import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class NinjaArmor extends ArmorItem implements GeoItem {
 
-    private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
-    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+
     public NinjaArmor(Type type) {
         super(new NinjaArmorMaterial(), type, new Item.Settings());
     }
 
     @Override
-    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(ItemStack stack, EquipmentSlot slot) {
-        if (!(stack.getItem() instanceof ArmorItem)) { return super.getAttributeModifiers(slot); }
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
 
-        Multimap<EntityAttribute, EntityAttributeModifier> hash = HashMultimap.create();
+        Multimap<EntityAttribute, EntityAttributeModifier> hash = ArrayListMultimap.create();
 
-        if (((ArmorItem) stack.getItem()).getSlotType() == EquipmentSlot.HEAD) {
-            if (slot == EquipmentSlot.HEAD) {
-                hash.put(
-                        Registries.ATTRIBUTE.get(new Identifier("combatroll:count")),
-                        new EntityAttributeModifier(
-                                "rolls",
-                                1,
-                                EntityAttributeModifier.Operation.ADDITION
-                        )
-                );
-                hash.put(
-                        Registries.ATTRIBUTE.get(new Identifier("minecraft:generic.armor")),
-                        new EntityAttributeModifier(
-                                "armor",
-                                2,
-                                EntityAttributeModifier.Operation.ADDITION
-                        )
-                );
-                return hash;
-            }
-        } else if (((ArmorItem) stack.getItem()).getSlotType() == EquipmentSlot.CHEST) {
-            if (slot == EquipmentSlot.CHEST) {
-                hash.put(
-                        Registries.ATTRIBUTE.get(new Identifier("combatroll:recharge")),
-                        new EntityAttributeModifier(
-                                "recharge",
-                                0.1,
-                                EntityAttributeModifier.Operation.ADDITION
-                        )
-                );
-                hash.put(
-                        Registries.ATTRIBUTE.get(new Identifier("minecraft:generic.armor")),
-                        new EntityAttributeModifier(
-                                "armor",
-                                3,
-                                EntityAttributeModifier.Operation.ADDITION
-                        )
-                );
-                return hash;
-            }
-        } else if (((ArmorItem) stack.getItem()).getSlotType() == EquipmentSlot.LEGS) {
-            if (slot == EquipmentSlot.LEGS) {
-                hash.put(
-                        Registries.ATTRIBUTE.get(new Identifier("combatroll:recharge")),
-                        new EntityAttributeModifier(
-                                "recharge",
-                                0.1,
-                                EntityAttributeModifier.Operation.ADDITION
-                        )
-                );
-                hash.put(
-                        Registries.ATTRIBUTE.get(new Identifier("minecraft:generic.armor")),
-                        new EntityAttributeModifier(
-                                "armor",
-                                3,
-                                EntityAttributeModifier.Operation.ADDITION
-                        )
-                );
-                return hash;
-            }
-        } else if (((ArmorItem) stack.getItem()).getSlotType() == EquipmentSlot.FEET) {
-            if (slot == EquipmentSlot.FEET) {
-                hash.put(
-                        Registries.ATTRIBUTE.get(new Identifier("combatroll:distance")),
-                        new EntityAttributeModifier(
-                                "distance",
-                                1,
-                                EntityAttributeModifier.Operation.ADDITION
-                        )
-                );
-                hash.put(
-                        Registries.ATTRIBUTE.get(new Identifier("minecraft:generic.armor")),
-                        new EntityAttributeModifier(
-                                "armor",
-                                2,
-                                EntityAttributeModifier.Operation.ADDITION
-                        )
-                );
-                return hash;
-            }
+        hash.putAll(super.getAttributeModifiers(type.getEquipmentSlot()));
+
+        switch (type) {
+            case HELMET -> hash.put(
+                    Registries.ATTRIBUTE.get(new Identifier("combatroll:count")),
+                    new EntityAttributeModifier(
+                            UUID.fromString("ca60d7d3-6006-4cd9-9d93-eebdc3e1781a"),
+                            "rolls",
+                            1,
+                            EntityAttributeModifier.Operation.ADDITION
+                    )
+            );
+            case CHESTPLATE, LEGGINGS -> hash.put(
+                    Registries.ATTRIBUTE.get(new Identifier("combatroll:recharge")),
+                    new EntityAttributeModifier(
+                            UUID.fromString("6d8278df-996a-4fe2-b7fb-f1549d02de5a"),
+                            "recharge",
+                            0.1,
+                            EntityAttributeModifier.Operation.ADDITION
+                    )
+            );
+            case BOOTS -> hash.put(
+                    Registries.ATTRIBUTE.get(new Identifier("combatroll:distance")),
+                    new EntityAttributeModifier(
+                            UUID.fromString("5223c44f-8e60-48a6-995a-f2fc5c5d1aa9"),
+                            "distance",
+                            1,
+                            EntityAttributeModifier.Operation.ADDITION
+                                        )
+            );
+
         }
 
+        if (slot == type.getEquipmentSlot()) {
+            return hash;
+        }
         return super.getAttributeModifiers(slot);
     }
+
+    // custom model
+
+    private final AnimatableInstanceCache cache = AzureLibUtil.createInstanceCache(this);
+    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {}

@@ -29,6 +29,10 @@ public class CreativeTab {
                 entries.add(IronSai);
                 entries.add(DiamondSai);
                 entries.add(NetheriteSai);
+                entries.add(Shuriken);
+                entries.add(NetheriteShuriken);
+                entries.add(Kunai);
+                entries.add(NetheriteKunai);
             })
             .build();
     public static void register() {

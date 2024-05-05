@@ -15,5 +15,10 @@
   "item.ninjas.diamond_sai": "Diamond Sai",
   "item.ninjas.netherite_sai": "Netherite Sai",
 
+  "item.ninjas.shuriken": "Shuriken",
+  "item.ninjas.netherite_shuriken": "Netherite Shuriken",
+  "item.ninjas.kunai": "Kunai",
+  "item.ninjas.netherite_kunai": "Netherite Kunai",
+
   "itemGroup.ninjas.tab": "Ninjas"
 }
