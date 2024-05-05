@@ -34,7 +34,6 @@ public class NinjaArmor extends ArmorItem implements GeoItem {
 
     @Override
     public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
-
         Multimap<EntityAttribute, EntityAttributeModifier> hash = ArrayListMultimap.create();
 
         hash.putAll(super.getAttributeModifiers(type.getEquipmentSlot()));

@@ -10,6 +10,7 @@
 - make a mod.png
 - item tags
 - loot pool additions
+- clean up code and fix warnings
 
 ## later updates
 - samurai armor and upgrade
@@ -17,3 +18,4 @@
 - villager and village structure
 - more thrown weapon mechanics (make a separate library?)
 - better textures
+- animation for throwing weapons
