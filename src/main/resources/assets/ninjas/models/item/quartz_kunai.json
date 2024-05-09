@@ -1,0 +1,6 @@
+{
+  "parent": "ninjas:sai",
+  "textures": {
+    "layer0": "ninjas:item/quartz_kunai"
+  }
+}
