@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "ninjas:iron_sai",
+    "ninjas:iron_katana",
+    "ninjas:kunai",
+    "ninjas:shuriken",
+    "ninjas:ninja_helmet",
+    "ninjas:ninja_chestplate",
+    "ninjas:ninja_leggings",
+    "ninjas:ninja_boots"
+  ]
+}

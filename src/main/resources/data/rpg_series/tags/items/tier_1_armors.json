@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ninjas:ninja_helmet",
+    "ninjas:ninja_chestplate",
+    "ninjas:ninja_leggings",
+    "ninjas:ninja_boots"
+  ]
+}

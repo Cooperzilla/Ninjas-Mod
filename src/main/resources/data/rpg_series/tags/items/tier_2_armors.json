@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ninjas:shinobi_helmet",
+    "ninjas:shinobi_chestplate",
+    "ninjas:shinobi_leggings",
+    "ninjas:shinobi_boots"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ninjas:iron_sai",
+    "ninjas:iron_katana",
+    "ninjas:kunai",
+    "ninjas:shuriken"
+  ]
+}
