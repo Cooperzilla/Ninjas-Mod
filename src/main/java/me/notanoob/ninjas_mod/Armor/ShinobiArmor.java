@@ -95,7 +95,6 @@ public class ShinobiArmor extends ArmorItem implements GeoItem {
     @Override
     public void createRenderer(Consumer<Object> consumer) {
         consumer.accept(new RenderProvider() {
-            // Your render made above
             private ShinobiArmorRenderer renderer;
 
             @Override
