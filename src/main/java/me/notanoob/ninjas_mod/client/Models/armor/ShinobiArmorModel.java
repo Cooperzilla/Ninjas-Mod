@@ -12,7 +12,7 @@ public class ShinobiArmorModel extends GeoModel<ShinobiArmor> {
 
     @Override
     public Identifier getTextureResource(ShinobiArmor ninjaArmor) {
-        return new Identifier("ninjas", "textures/armor/ninja_armor.png");
+        return new Identifier("ninjas", "textures/armor/shinobi_armor.png");
     }
 
     @Override
