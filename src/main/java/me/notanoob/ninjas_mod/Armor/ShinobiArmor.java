@@ -21,6 +21,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -39,6 +40,7 @@ public class ShinobiArmor extends ArmorItem implements GeoItem {
             case HELMET -> hash.put(
                     Registries.ATTRIBUTE.get(new Identifier("combatroll:count")),
                     new EntityAttributeModifier(
+                            UUID.fromString("ca60d7d3-6006-4cd9-9d93-eebdc3e1781a"),
                             "rolls",
                             2,
                             EntityAttributeModifier.Operation.ADDITION
@@ -47,22 +49,25 @@ public class ShinobiArmor extends ArmorItem implements GeoItem {
             case CHESTPLATE -> hash.put(
                     Registries.ATTRIBUTE.get(new Identifier("combatroll:recharge")),
                     new EntityAttributeModifier(
+                            UUID.fromString("6d8278df-996a-4fe2-b7fb-f1549d02de5a"),
                             "recharge",
-                            1.1,
+                            0.2,
                             EntityAttributeModifier.Operation.MULTIPLY_TOTAL
                     )
             );
             case LEGGINGS -> hash.put(
                     Registries.ATTRIBUTE.get(new Identifier("combatroll:recharge")),
                     new EntityAttributeModifier(
+                            UUID.fromString("b591bb43-7f41-4410-a09e-5d40c9154379"),
                             "recharge",
-                            0.2,
+                            3,
                             EntityAttributeModifier.Operation.ADDITION
                     )
             );
             case BOOTS -> hash.put(
                     Registries.ATTRIBUTE.get(new Identifier("combatroll:distance")),
                     new EntityAttributeModifier(
+                            UUID.fromString("5223c44f-8e60-48a6-995a-f2fc5c5d1aa9"),
                             "distance",
                             2,
                             EntityAttributeModifier.Operation.ADDITION

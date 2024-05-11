@@ -48,12 +48,21 @@ public class NinjaArmor extends ArmorItem implements GeoItem {
                             EntityAttributeModifier.Operation.ADDITION
                     )
             );
-            case CHESTPLATE, LEGGINGS -> hash.put(
+            case CHESTPLATE -> hash.put(
                     Registries.ATTRIBUTE.get(new Identifier("combatroll:recharge")),
                     new EntityAttributeModifier(
                             UUID.fromString("6d8278df-996a-4fe2-b7fb-f1549d02de5a"),
                             "recharge",
-                            0.1,
+                            2,
+                            EntityAttributeModifier.Operation.ADDITION
+                    )
+            );
+            case LEGGINGS -> hash.put(
+                    Registries.ATTRIBUTE.get(new Identifier("combatroll:recharge")),
+                    new EntityAttributeModifier(
+                            UUID.fromString("b591bb43-7f41-4410-a09e-5d40c9154379"),
+                            "recharge",
+                            2,
                             EntityAttributeModifier.Operation.ADDITION
                     )
             );

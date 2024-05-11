@@ -2,19 +2,17 @@
 
 ## todo
 - add spells
-- add recipes
-- add item textures
-- better armor model/texture
-- add missing model textures for armor and thrown weapons
+- add armor item textures
+- shinobi armor texture (reuse model)
+- add throwing weapon entity models
 - fix gradle.properties not working w/ fabric.mod.json
 - make a mod.png
 - item tags
 - loot pool additions
-- clean up code and fix warnings
 
 ## later updates
 - samurai armor and upgrade
-- more weapons
+- more weapons?
 - villager and village structure
 - more thrown weapon mechanics (make a separate library?)
 - better textures
