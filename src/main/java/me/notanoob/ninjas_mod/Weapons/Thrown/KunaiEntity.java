@@ -7,24 +7,21 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 
 import static me.notanoob.ninjas_mod.Registies.EntityRegister.KunaiEntityType;
 
 public class KunaiEntity extends ThrownItemEntity {
+    private float dmg;
+
     public KunaiEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public KunaiEntity(World world, LivingEntity owner) {
+    public KunaiEntity(World world, LivingEntity owner, float dmg) {
         super(KunaiEntityType, owner, world);
-    }
-
-    public KunaiEntity(World world, double x, double y, double z) {
-        super(KunaiEntityType, x, y, z, world);
+        this.dmg = dmg;
     }
 
     @Override
@@ -44,10 +41,7 @@ public class KunaiEntity extends ThrownItemEntity {
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
         if (entityHitResult.getEntity() instanceof LivingEntity entity && this.getOwner() instanceof PlayerEntity player) {
-            entity.damage(
-                    this.getWorld().getDamageSources().thrown(this, player),
-                    (float) player.getAttributeValue(Registries.ATTRIBUTE.get(new Identifier("ranged_weapon:damage")))
-            );
+            entity.damage(this.getWorld().getDamageSources().thrown(this, player), dmg);
         }
     }
 }

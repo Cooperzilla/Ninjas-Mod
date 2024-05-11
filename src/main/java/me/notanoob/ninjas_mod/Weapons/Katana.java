@@ -1,6 +1,5 @@
 package me.notanoob.ninjas_mod.Weapons;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 

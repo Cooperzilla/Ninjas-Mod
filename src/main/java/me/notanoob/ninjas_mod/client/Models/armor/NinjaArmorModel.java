@@ -1,10 +1,10 @@
-package me.notanoob.ninjas_mod.client.Models;
+package me.notanoob.ninjas_mod.client.Models.armor;
 
 import me.notanoob.ninjas_mod.Armor.NinjaArmor;
 import mod.azure.azurelibarmor.model.GeoModel;
 import net.minecraft.util.Identifier;
 
-public class ShinobiArmorModel extends GeoModel<NinjaArmor> {
+public class NinjaArmorModel extends GeoModel<NinjaArmor> {
     @Override
     public Identifier getModelResource(NinjaArmor ninjaArmor) {
         return new Identifier("ninjas", "geo/ninja_armor.geo.json");

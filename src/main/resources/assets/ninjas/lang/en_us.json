@@ -20,5 +20,10 @@
   "item.ninjas.kunai": "Kunai",
   "item.ninjas.quartz_kunai": "Quartz Kunai",
 
-  "itemGroup.ninjas.tab": "Ninjas"
+  "itemGroup.ninjas.tab": "Ninjas",
+
+  "item.ninjas.quartz_kunai.tooltip": "+7 Ranged Damage",
+  "item.ninjas.kunai.tooltip": "+4 Ranged Damage",
+  "item.ninjas.quartz_shuiken.tooltip": "+8 Ranged Damage",
+  "item.ninjas.shuiken.tooltip": "+5 Ranged Damage"
 }

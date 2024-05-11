@@ -3,7 +3,7 @@ package me.notanoob.ninjas_mod.Armor;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import me.notanoob.ninjas_mod.ArmorMaterials.NinjaArmorMaterial;
-import me.notanoob.ninjas_mod.client.renderer.NinjaArmorRenderer;
+import me.notanoob.ninjas_mod.client.renderer.armor.NinjaArmorRenderer;
 import mod.azure.azurelibarmor.animatable.GeoItem;
 import mod.azure.azurelibarmor.animatable.client.RenderProvider;
 import mod.azure.azurelibarmor.core.animatable.instance.AnimatableInstanceCache;
@@ -105,6 +105,7 @@ public class NinjaArmor extends ArmorItem implements GeoItem {
                     this.renderer = new NinjaArmorRenderer();
                 }
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
+                //noinspection unchecked
                 return this.renderer;
             }
         });

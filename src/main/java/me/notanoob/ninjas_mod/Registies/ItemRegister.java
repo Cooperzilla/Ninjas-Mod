@@ -15,6 +15,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+@SuppressWarnings("CanBeFinal")
 public class ItemRegister {
 
     public static Item NinjaHelmet = new NinjaArmor(ArmorItem.Type.HELMET);
