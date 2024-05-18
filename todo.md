@@ -5,6 +5,7 @@
 - add throwing weapon entity models
 - integrate my attributes mod
 - different shinobi armor model/texture
+- spells
 
 ## later updates
 - samurai armor and upgrade
@@ -14,7 +15,6 @@
 - animation for throwing weapons
 - better sounds
 - better sai better combat attack animation
-- spells
 
 ## dev setup
 - fix gradle.properties not working w/ fabric.mod.json

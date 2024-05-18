@@ -1,0 +1,35 @@
+{
+  "school": "PHYSICAL_MELEE",
+  "range": 10,
+  "learn": {
+    "tier": 0
+  },
+  "mode": "ITEM_USE",
+  "cast": {
+    "duration": 2.0,
+    "animation": "spell_engine:one_handed_projectile_charge",
+    "sound": {
+      "id": "spell_engine:generic_fire_casting",
+      "randomness": 0
+    }
+  },
+  "release": {
+    "target": {
+      "type": "PROJECTILE"
+    },
+    "animation": "spell_engine:one_handed_projectile_release",
+    "sound": {
+      "id": "spell_engine:generic_fire_release"
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "minecraft:slowness"
+        }
+      }
+    }
+  ]
+}
