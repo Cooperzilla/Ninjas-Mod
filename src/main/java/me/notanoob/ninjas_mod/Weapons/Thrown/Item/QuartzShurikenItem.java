@@ -1,8 +1,7 @@
-package me.notanoob.ninjas_mod.Weapons.Thrown;
+package me.notanoob.ninjas_mod.Weapons.Thrown.Item;
 
+import me.notanoob.ninjas_mod.Weapons.Thrown.Entity.QuartzShurikenEntity;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,7 +18,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.UUID;
 
 public class QuartzShurikenItem extends Item {
     public QuartzShurikenItem() {
@@ -31,26 +29,10 @@ public class QuartzShurikenItem extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 1F);
 
         if (! world.isClient) {
-            EntityAttributeInstance attr = user.getAttributeInstance(Registries.ATTRIBUTE.get(new Identifier("ranged_weapon:damage")));
-
-            assert attr != null;
-            EntityAttributeModifier modifier;
-
-            attr.addTemporaryModifier(
-                    modifier = new EntityAttributeModifier(
-                            UUID.fromString("ab6a0660-a01c-4e25-98f4-c2d1e8b40acf"),
-                            "damage",
-                            8,
-                            EntityAttributeModifier.Operation.ADDITION
-                    )
-            );
-
-            QuartzShurikenEntity entity = new QuartzShurikenEntity(world, user, (float) attr.getValue());
+            QuartzShurikenEntity entity = new QuartzShurikenEntity(world, user);
             entity.setItem(itemStack);
             entity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 0F);
             world.spawnEntity(entity);
-
-            attr.removeModifier(modifier);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));

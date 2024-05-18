@@ -1,9 +1,9 @@
 package me.notanoob.ninjas_mod.Registies;
 
-import me.notanoob.ninjas_mod.Weapons.Thrown.KunaiEntity;
-import me.notanoob.ninjas_mod.Weapons.Thrown.QuartzKunaiEntity;
-import me.notanoob.ninjas_mod.Weapons.Thrown.QuartzShurikenEntity;
-import me.notanoob.ninjas_mod.Weapons.Thrown.ShurikenEntity;
+import me.notanoob.ninjas_mod.Weapons.Thrown.Entity.KunaiEntity;
+import me.notanoob.ninjas_mod.Weapons.Thrown.Entity.QuartzKunaiEntity;
+import me.notanoob.ninjas_mod.Weapons.Thrown.Entity.QuartzShurikenEntity;
+import me.notanoob.ninjas_mod.Weapons.Thrown.Entity.ShurikenEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
