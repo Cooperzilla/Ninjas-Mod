@@ -4,10 +4,6 @@ import me.notanoob.ninjas_mod.Armor.NinjaArmor;
 import me.notanoob.ninjas_mod.Armor.ShinobiArmor;
 import me.notanoob.ninjas_mod.Weapons.Katana;
 import me.notanoob.ninjas_mod.Weapons.Sai;
-import me.notanoob.ninjas_mod.Weapons.Thrown.Item.KunaiItem;
-import me.notanoob.ninjas_mod.Weapons.Thrown.Item.QuartzKunaiItem;
-import me.notanoob.ninjas_mod.Weapons.Thrown.Item.QuartzShurikenItem;
-import me.notanoob.ninjas_mod.Weapons.Thrown.Item.ShurikenItem;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterials;
@@ -32,10 +28,6 @@ public class ItemRegister {
     public static Item IronSai = new Sai(ToolMaterials.IRON, new Item.Settings());
     public static Item DiamondSai = new Sai(ToolMaterials.DIAMOND, new Item.Settings());
     public static Item NetheriteSai = new Sai(ToolMaterials.NETHERITE, new Item.Settings().fireproof());
-    public static Item Shuriken = new ShurikenItem();
-    public static Item QuartzShuriken = new QuartzShurikenItem();
-    public static Item Kunai = new KunaiItem();
-    public static Item QuartzKunai = new QuartzKunaiItem();
 
 
     public static void register() {
@@ -53,9 +45,5 @@ public class ItemRegister {
         Registry.register(Registries.ITEM, new Identifier("ninjas", "iron_sai"), IronSai);
         Registry.register(Registries.ITEM, new Identifier("ninjas", "diamond_sai"), DiamondSai);
         Registry.register(Registries.ITEM, new Identifier("ninjas", "netherite_sai"), NetheriteSai);
-        Registry.register(Registries.ITEM, new Identifier("ninjas", "shuriken"), Shuriken);
-        Registry.register(Registries.ITEM, new Identifier("ninjas", "quartz_shuriken"), QuartzShuriken);
-        Registry.register(Registries.ITEM, new Identifier("ninjas", "kunai"), Kunai);
-        Registry.register(Registries.ITEM, new Identifier("ninjas", "quartz_kunai"), QuartzKunai);
     }
 }
