@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "ninjas:diamond_sai",
-    "ninjas:diamond_katana",
-    "ninjas:quartz_kunai",
-    "ninjas:quartz_shuriken"
+    "ninjas:diamond_katana"
   ]
 }
